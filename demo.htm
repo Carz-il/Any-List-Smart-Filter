@@ -1,0 +1,72 @@
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script src="jquery.listAutoFilter.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+
+        //here you set the filter.
+        var filtersRules =
+            {
+                'Make': 'filter-make',
+                'Model': 'filter-model',
+                'Production Year': 'filter-year'
+            };
+
+        var options = {
+            filterContainer: $('#filtersHere'),
+            Rules: filtersRules,
+            itemsChanged: function (container, visibleItems, source) {
+                $('h1').text(visibleItems.length + ' filtered cars');
+            }
+        };
+
+
+        $('#cars').listAutoFilter(options);
+
+    });
+</script>
+
+<style>
+#filtersHere{height:120px}
+#filtersHere > .filterBox{float:left ;width: 90px;background: #fff;border:solid 1px #ccc;margin:4px}
+#filtersHere > .filterBox > .filterTitle{ font-weight: bold;font-size: small}
+#filtersHere > .filterBox > .filterOptions{background: white; background: #C3F689}
+#filtersHere > .filterBox > .filterOptions > .optionWrapper{display:block}
+.ListItem{ font-size: small;}
+</style>
+
+<div id="filtersHere"></div>
+<h1>cars</h1>
+<ul id="cars">
+	<li class='ListItem'> 
+		<span role='filter-make'>fiat</span> 
+		<span role='filter-model'>panda</span>
+		<span role='filter-year'>2004
+		
+		</span>
+	</li>
+   <li class='ListItem'> 
+	   <span role='filter-make'>ford
+	   
+	   </span>
+	   <span role='filter-model'>focus</span>
+	   <span role='filter-year'>2008</span>
+   </li>
+   <li class='ListItem'> 
+	   <span role='filter-make'>lancia
+	   </span>
+	   <span role='filter-model'>delta</span>
+	   <span role='filter-year'>2008</span>
+   </li>
+   <li class='ListItem'> 
+	   <span role='filter-make'>alfa romeo</span>
+	   <span role='filter-model'>   julieta</span>
+	   <span role='filter-year'>2010</span>
+   </li>
+   <li class='ListItem'> 
+	   <span role='filter-make'>mitsubishi</span>
+	   <span role='filter-model'>lancer</span>
+	   <span role='filter-year'>2004</span>
+   </li>
+ </ul>
