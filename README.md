@@ -4,10 +4,15 @@ Any-List-Smart-Filter
 jquery plugin to create automatically smart filtering to any list
 
 Usage
-=====
+--------
 
 1) include Jquery library
+
+
 2) create a list like this:
+
+
+```bash
 
 <ul id="cars">
   <li class='ListItem'> 
@@ -27,10 +32,17 @@ Usage
    </li>
  </ul>
  
+ ```
+ 
+ 
+ 
  3) create a place holder for the filters
+ ```bash
     <div id="filtersHere"></div>
+```
  4) run the plugin:
  
+  ```bash
  <script>
     $(document).ready(function () {
 
@@ -53,7 +65,11 @@ Usage
 
         $('#cars').listAutoFilter(options);
         
-  5) that's all
+ 
 
     });
 </script>
+```
+ 5) that's all
+ 
+ 6) see the demo.htm for more options
