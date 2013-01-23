@@ -1,6 +1,8 @@
 Any-List-Smart-Filter
 =====================
 
+DEMO: http://codepen.io/yardenst/pen/nbiLq
+
 jquery plugin to create automatically smart filtering to any list
 
 Usage
